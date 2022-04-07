@@ -1,3 +1,5 @@
+import UserNotAuthorizedException from "../exception/NotAuthorizedException";
+
 /**
  * Custom error codes to be send to UI to display proper a response
  */
@@ -17,6 +19,14 @@ export const ErrorCodes: { [key: string]: CustomError } = {
     VALIDATION_ERROR: {
         CODE: "VALIDATION_ERROR",
         MESSAGE: "Validation failed error",
+    },
+    INCORRECT_USERNAME_OR_PASSWORD:{
+        CODE:"INCORRECT_USERNAME_OR_PASSWORD" ,
+        MESSAGE:"Incorrect username or password"
+    },
+    USER_NOT_AUTHORIZED:{
+        CODE:"USER_NOT_AUTHORIZED" ,
+        MESSAGE:"User not authorized"
     }
 };
 
